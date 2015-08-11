@@ -13,10 +13,9 @@ InputParameters validParams<EagleApp>()
   return params;
 }
 
-EagleApp::EagleApp(const std::string & name, InputParameters parameters) :
-    MooseApp(name, parameters)
+EagleApp::EagleApp(InputParameters parameters) :
+    MooseApp(parameters)
 {
-  srand(processor_id());
 
   Moose::registerObjects(_factory);
   ModulesApp::registerObjects(_factory);

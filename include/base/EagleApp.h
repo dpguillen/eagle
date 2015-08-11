@@ -11,7 +11,7 @@ InputParameters validParams<EagleApp>();
 class EagleApp : public MooseApp
 {
 public:
-  EagleApp(const std::string & name, InputParameters parameters);
+  EagleApp(InputParameters parameters);
   virtual ~EagleApp();
 
   static void registerApps();
